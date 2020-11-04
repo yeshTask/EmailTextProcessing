@@ -1,0 +1,27 @@
+
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load('visualization', '1', {'packages':['corechart']});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', '3 Word "To" Phrase');
+        data.addColumn('number', 'Occurances in Inbox');
+        data.addRows([['need to know', 6], ['Need to Know', 2], ['intended to go', 1], ['planning to stop', 1], ['used to tackle', 1], ['hoping to increase', 1], ['like to introduce', 1], ['is to ensure', 1], ['like to help', 1]]
+        );
+
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, {width: 1200, height: 1200, is3D: true, title: 'Phrases in the email'});
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="chart_div"></div>
+  </body>
+</html>
+
+
