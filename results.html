@@ -8,13 +8,13 @@
 
       function drawChart() {
         var data = new google.visualization.DataTable();
-        data.addColumn('string', '3 Word "To" Phrase');
-        data.addColumn('number', 'Occurances in Inbox');
+        data.addColumn('string', 'Phrases in your email');
+        data.addColumn('number', 'Frequency');
         data.addRows([['need to know', 6], ['Need to Know', 2], ['intended to go', 1], ['planning to stop', 1], ['used to tackle', 1], ['hoping to increase', 1], ['like to introduce', 1], ['is to ensure', 1], ['like to help', 1]]
         );
 
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-        chart.draw(data, {width: 1200, height: 1200, is3D: true, title: 'Phrases in the email'});
+        chart.draw(data, {width: 1200, height: 1200, is3D: true, title: 'Phrases in your email'});
       }
     </script>
   </head>

@@ -26,13 +26,13 @@ google_graph = """
 
       function drawChart() {
         var data = new google.visualization.DataTable();
-        data.addColumn('string', '3 Word "To" Phrase');
-        data.addColumn('number', 'Occurances in Inbox');
+        data.addColumn('string', 'Phrases in your email');
+        data.addColumn('number', 'Frequency');
         data.addRows(%s
         );
 
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-        chart.draw(data, {width: 1200, height: 1200, is3D: true, title: 'Phrases in the email'});
+        chart.draw(data, {width: 1200, height: 1200, is3D: true, title: 'Phrases in your email'});
       }
     </script>
   </head>
